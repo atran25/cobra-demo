@@ -2,7 +2,7 @@ name: backend-deployment
 on: push
 
 jobs:
-    ci_lint:
+  ci_lint:
     name: ci_lint
     runs-on: ubuntu-latest
 
