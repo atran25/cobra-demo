@@ -1,9 +1,25 @@
 name: backend-deployment
 on: push
+
 jobs:
-  golangci_lint:
-    name: golangci_lint
-    runs-on: ubuntu-latest
   deploy_to_railway:
     name: deploy_to_railway
-    needs: golangci_lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Go environment
+        uses: actions/setup-go@v5.0.0
+
+      - name: install packages
+      - uses: go mod download && go mod verify
+
+      - name: Install Railway
+        run: npm i -g @railway/cli
+
+      - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
