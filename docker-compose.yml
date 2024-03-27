@@ -1,0 +1,7 @@
+name: backend
+services:
+    cobra-viper-demo:
+        stdin_open: true
+        tty: true
+        container_name: cobra-viper-demo
+        image: cobra-viper-demo
