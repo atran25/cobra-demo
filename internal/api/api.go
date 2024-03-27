@@ -25,6 +25,6 @@ func StartServer() {
 		log.Fatalf("error loading config from environment: %v", err)
 	}
 
-	fmt.Println("istmall", k.Get("istmall"))
-	fmt.Println("istmall2", k.Get("istmall2"))
+	log.Println("istmall", k.Get("istmall"))
+	log.Println("istmall2", k.Get("istmall2"))
 }
