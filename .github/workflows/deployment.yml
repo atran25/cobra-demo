@@ -1,0 +1,9 @@
+name: backend-deployment
+on: push
+jobs:
+  golangci_lint:
+    name: golangci_lint
+    runs-on: ubuntu-latest
+  deploy_to_railway:
+    name: deploy_to_railway
+    needs: golangci_lint
