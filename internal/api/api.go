@@ -3,7 +3,6 @@ package api
 import (
 	"fmt"
 	"log"
-	"os"
 	"strings"
 
 	"github.com/knadh/koanf/parsers/dotenv"
@@ -25,8 +24,6 @@ func StartServer() {
 	}), nil); err != nil {
 		log.Fatalf("error loading config from environment: %v", err)
 	}
-
-
 
 	fmt.Println("istmall", k.Get("istmall"))
 	fmt.Println("istmall2", k.Get("istmall2"))
