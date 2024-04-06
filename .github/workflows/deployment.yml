@@ -1,5 +1,8 @@
 name: backend-deployment
-on: push
+on: 
+  push:
+    branch:
+      - 
 
 jobs:
   ci_lint:

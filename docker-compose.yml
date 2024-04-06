@@ -1,7 +1,10 @@
+version: '1'
 name: backend
 services:
     cobra-viper-demo:
-        stdin_open: true
-        tty: true
         container_name: cobra-viper-demo
-        image: cobra-viper-demo
+        build: .
+        ports:
+            - "8085:8080"
+        environment:
+            - dfogg_database_mysql=${dfogg_database_mysql}

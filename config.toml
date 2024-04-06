@@ -1,0 +1,11 @@
+[net]
+port = 8080
+name = "cobra-viper"
+
+[database]
+hostname = "localhost"
+port = 5444
+database = "postgres"
+username = "postgres"
+password = "password"
+mysql = "op://dfo.gg/Database/type"
